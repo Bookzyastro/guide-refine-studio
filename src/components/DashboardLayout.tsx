@@ -7,6 +7,7 @@ import {
   MessageSquare,
   Award,
   LogOut,
+  Calendar,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -21,14 +22,25 @@ const DashboardLayout = ({ children, userType }: DashboardLayoutProps) => {
   const location = useLocation();
   const basePath = `/${userType}-dashboard`;
 
-  const navItems = [
+  const studentNavItems = [
     { icon: Home, label: "Dashboard", path: basePath },
     { icon: User, label: "Profile", path: `${basePath}/profile` },
     { icon: Compass, label: "Explore Posts", path: `${basePath}/explore` },
-    { icon: Users, label: "Find Mentor", path: `${basePath}/find-mentor` },
+    { icon: Users, label: "Find My Mentor", path: `${basePath}/find-mentor` },
     { icon: MessageSquare, label: "Chats", path: `${basePath}/chats` },
     { icon: Award, label: "Rewards", path: `${basePath}/rewards` },
   ];
+
+  const mentorNavItems = [
+    { icon: Home, label: "Dashboard", path: basePath },
+    { icon: User, label: "Profile", path: `${basePath}/profile` },
+    { icon: Compass, label: "Explore Posts", path: `${basePath}/explore` },
+    { icon: Calendar, label: "My Sessions", path: `${basePath}/sessions` },
+    { icon: MessageSquare, label: "Chats", path: `${basePath}/chats` },
+    { icon: Award, label: "Rewards", path: `${basePath}/rewards` },
+  ];
+
+  const navItems = userType === "student" ? studentNavItems : mentorNavItems;
 
   return (
     <div className="flex min-h-screen bg-background">

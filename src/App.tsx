@@ -9,6 +9,7 @@ import MentorDashboard from "./pages/MentorDashboard";
 import Profile from "./pages/Profile";
 import ExplorePosts from "./pages/ExplorePosts";
 import FindMentor from "./pages/FindMentor";
+import Sessions from "./pages/Sessions";
 import Chats from "./pages/Chats";
 import Rewards from "./pages/Rewards";
 import NotFound from "./pages/NotFound";
@@ -32,7 +33,7 @@ const App = () => (
           <Route path="/mentor-dashboard" element={<MentorDashboard />} />
           <Route path="/mentor-dashboard/profile" element={<Profile />} />
           <Route path="/mentor-dashboard/explore" element={<ExplorePosts />} />
-          <Route path="/mentor-dashboard/find-mentor" element={<FindMentor />} />
+          <Route path="/mentor-dashboard/sessions" element={<Sessions />} />
           <Route path="/mentor-dashboard/chats" element={<Chats />} />
           <Route path="/mentor-dashboard/rewards" element={<Rewards />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
