@@ -60,9 +60,9 @@ const StudentDashboard = () => {
 
             <div className="space-y-6">
               {posts.map((post, i) => (
-                <Card key={i} className="p-6 border border-border hover:bg-card/80 transition-colors">
+                <Card key={i} className="p-6 border border-border hover:border-primary/30 transition-colors">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center font-bold flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center font-bold flex-shrink-0 text-primary">
                       {post.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -74,15 +74,15 @@ const StudentDashboard = () => {
                       <p className="mb-4 leading-relaxed">{post.content}</p>
                       
                       <div className="flex items-center gap-6">
-                        <Button variant="ghost" size="sm" className="gap-2 hover:text-foreground">
+                        <Button variant="ghost" size="sm" className="gap-2 hover:text-primary">
                           <Heart className="w-4 h-4" />
                           <span>{post.likes}</span>
                         </Button>
-                        <Button variant="ghost" size="sm" className="gap-2 hover:text-foreground">
+                        <Button variant="ghost" size="sm" className="gap-2 hover:text-primary">
                           <MessageSquare className="w-4 h-4" />
                           <span>{post.comments}</span>
                         </Button>
-                        <Button variant="ghost" size="sm" className="gap-2 hover:text-foreground">
+                        <Button variant="ghost" size="sm" className="gap-2 hover:text-primary">
                           <Share2 className="w-4 h-4" />
                           <span>Share</span>
                         </Button>
@@ -100,7 +100,7 @@ const StudentDashboard = () => {
           <div className="p-6">
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-2">
-                <Flame className="w-5 h-5" />
+                <Flame className="w-5 h-5 text-primary" />
                 <h2 className="text-xl font-bold">Hot Posts</h2>
               </div>
               <p className="text-sm text-muted-foreground">Trending in the community</p>
@@ -110,20 +110,20 @@ const StudentDashboard = () => {
               {hotPosts.map((post, i) => (
                 <Card 
                   key={i} 
-                  className="p-4 border border-border hover:bg-muted/50 transition-colors cursor-pointer"
+                  className="p-4 border border-border hover:border-primary/30 transition-colors cursor-pointer"
                 >
                   <div className="flex items-start gap-3">
                     <div className="flex-1">
                       {post.trending && (
                         <div className="flex items-center gap-1 mb-2">
-                          <TrendingUp className="w-3 h-3 text-foreground" />
-                          <span className="text-xs font-medium">Trending</span>
+                          <TrendingUp className="w-3 h-3 text-primary" />
+                          <span className="text-xs font-medium text-primary">Trending</span>
                         </div>
                       )}
                       <h3 className="font-semibold text-sm mb-2 line-clamp-2">{post.title}</h3>
                       <div className="flex items-center justify-between text-xs text-muted-foreground">
                         <span>{post.author}</span>
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 text-primary">
                           <Heart className="w-3 h-3" />
                           <span>{post.likes}</span>
                         </div>
@@ -134,23 +134,23 @@ const StudentDashboard = () => {
               ))}
             </div>
 
-            <Card className="p-4 border border-border mt-6">
+            <Card className="p-4 border border-primary/20 bg-primary/5 mt-6">
               <div className="flex items-center gap-2 mb-3">
-                <Zap className="w-5 h-5" />
+                <Zap className="w-5 h-5 text-primary" />
                 <h3 className="font-bold">Quick Stats</h3>
               </div>
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Your Posts</span>
-                  <span className="font-semibold">12</span>
+                  <span className="font-semibold text-primary">12</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Mentors Following</span>
-                  <span className="font-semibold">8</span>
+                  <span className="font-semibold text-primary">8</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Active Sessions</span>
-                  <span className="font-semibold">3</span>
+                  <span className="font-semibold text-primary">3</span>
                 </div>
               </div>
             </Card>

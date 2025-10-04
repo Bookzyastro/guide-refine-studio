@@ -62,8 +62,8 @@ const DashboardLayout = ({ children, userType }: DashboardLayoutProps) => {
                 <Button
                   variant="ghost"
                   className={cn(
-                    "w-full justify-start",
-                    isActive && "bg-accent"
+                    "w-full justify-start hover:bg-primary/10 hover:text-primary",
+                    isActive && "bg-primary/10 text-primary"
                   )}
                 >
                   <Icon className="w-4 h-4 mr-3" />
