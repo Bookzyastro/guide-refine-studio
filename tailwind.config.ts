@@ -106,12 +106,19 @@ export default {
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-secondary': 'var(--gradient-secondary)',
-        'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-mesh': 'var(--gradient-mesh)',
       },
       boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
-        'card': 'var(--shadow-card)',
-        'hover': 'var(--shadow-hover)',
+        'soft': 'var(--shadow-soft)',
+        'medium': 'var(--shadow-medium)',
+        'large': 'var(--shadow-large)',
+        'glow': 'var(--shadow-glow)',
+        'glow-secondary': 'var(--shadow-glow-secondary)',
+        'glass': 'var(--glass-shadow)',
+      },
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },
