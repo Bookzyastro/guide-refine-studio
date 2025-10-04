@@ -103,23 +103,6 @@ export default {
         "scale-in": "scale-in 0.2s ease-out",
         "slide-up": "slide-up 0.4s ease-out",
       },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-secondary': 'var(--gradient-secondary)',
-        'gradient-accent': 'var(--gradient-accent)',
-        'gradient-mesh': 'var(--gradient-mesh)',
-      },
-      boxShadow: {
-        'soft': 'var(--shadow-soft)',
-        'medium': 'var(--shadow-medium)',
-        'large': 'var(--shadow-large)',
-        'glow': 'var(--shadow-glow)',
-        'glow-secondary': 'var(--shadow-glow-secondary)',
-        'glass': 'var(--glass-shadow)',
-      },
-      backdropBlur: {
-        xs: '2px',
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
